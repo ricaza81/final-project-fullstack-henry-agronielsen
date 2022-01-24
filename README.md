@@ -1,6 +1,9 @@
-# react-fullstack-henry-project
+# react-fullstack-henry-final-project
 
-# Requeriments
+# Roadmap Google Sheets
+### For more information about the structure see: https://bit.ly/3GYo3sn
+
+# Requirements
 #### After npm start please check > Run in web browser
 
 ![img](https://github.com/ricaza81/final-project-fullstack-henry-agronielsen/raw/master/req.png)
