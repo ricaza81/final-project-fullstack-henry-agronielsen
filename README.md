@@ -2,8 +2,8 @@
 
 # Complete Structure >>> FullStackHenry
 ### For more information about the structure see: https://bit.ly/3nTOSXf
-### For more information about the structure see: <a href="https://github.com/ricaza81/final-project-fullstack-henry-agronielsen" target="_blank">Check</a>
-####
+### For more information about the structure see:
+<a href="https://github.com/ricaza81/final-project-fullstack-henry-agronielsen" target="_blank">Check</a>
 # Roadmap in Google Sheets
 ### For more information about the structure see: https://bit.ly/3GYo3sn
 
