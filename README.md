@@ -1,6 +1,9 @@
 # react-fullstack-henry-final-project
 
-# Roadmap Google Sheets
+# Complete Structure >>> FullStackHenry
+### For more information about the structure see: https://bit.ly/3nTOSXf
+
+# Roadmap in Google Sheets
 ### For more information about the structure see: https://bit.ly/3GYo3sn
 
 # Requirements
