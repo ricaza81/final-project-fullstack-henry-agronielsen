@@ -2,15 +2,17 @@ import React, {component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './css/appx/assets/css/app.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Header from './components/Header'
+import Header from './components/Header';
+import CanvaLeft from './components/Front/CanvaLeft';
+import CanvaRight from './components/Front/CanvaRight';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+   
     <Header />
-
+    <CanvaLeft />
+    <CanvaRight />
   </React.StrictMode>,
   document.getElementById('root')
 );

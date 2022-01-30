@@ -1,24 +1,43 @@
 import React from 'react';
+//import {CanvaLeft} from './components/Front/CanvaLeft';
+import '../css/olympus/app/Bootstrap/dist/css/bootstrap.css';
 
-function Header() {
+export default function Header() {
+	
+	
+	let logindemo="";
+
 	return (
-    <div className="page-loader">
-        <div id="preloader">
-            <span>Cargando...</span>
-        </div>
+    
+       
 
-         <div className="row text-center" style={{padding:"4px",margin:"auto",color:"#fff"}}>
-	         <span>
-	            Consultar Demo >
-	         </span>
-	       	 <span>
-	    		Consultar
-	    	 </span>
+         <div className="" style={{textAlign:"center",width:"100%",height:"80px",paddingTop:"25px",color:"#fff",background:"#000"}}>
+		 	<a
+					href={logindemo}
+					className="read-btn1"
+				>
+					Demo:
+            </a>
+	       	 <btn className="btn btn-primary" style={{marginLeft:"15px"}}>
+	    		Visitar
+	    	 </btn>
+
+		
+			
 	    </div>
-    </div>
-    	);
-	}
+	
+    
+		
+		);
+	};
 
-export default Header;
+	/*const styles = StyleSheet.create({
+		
+		read-btn1: {
+			
+		},
+
+
+	  });*/
 
     
