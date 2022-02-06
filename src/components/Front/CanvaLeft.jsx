@@ -5,8 +5,8 @@ export default function CanvaLeft() {
     //let logindemo="";
    
        return (    
-               <div className="map_canvas1" style={{width:"50%",textAlign:"center",float:'left',height:"580px",paddingTop:"25px",color:"#fff",background:"#666a6d"}}>
-                   
+               <div className="" style={{width:"50%",textAlign:"center",float:'left',height:"580px",paddingTop:"25px",color:"#fff",background:"#666a6d"}}>
+                   sadasdasd
                </div>      
                );
    };

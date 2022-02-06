@@ -1,6 +1,7 @@
 import React from 'react';
 //import {CanvaLeft} from './components/Front/CanvaLeft';
 import '../css/olympus/app/Bootstrap/dist/css/bootstrap.css';
+import ReactGlobe from 'react-globe';
 
 export default function Header() {
 	
@@ -19,7 +20,7 @@ export default function Header() {
 					Demo:
             </a>
 	       	 <btn className="btn btn-primary" style={{marginLeft:"15px"}}>
-	    		Visitar
+	    		Visitar URL >>>
 	    	 </btn>
 
 		
