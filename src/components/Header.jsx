@@ -1,17 +1,9 @@
 import React from 'react';
-//import {CanvaLeft} from './components/Front/CanvaLeft';
 import '../css/olympus/app/Bootstrap/dist/css/bootstrap.css';
-import ReactGlobe from 'react-globe';
 
 export default function Header() {
-	
-	
 	let logindemo="";
-
 	return (
-    
-       
-
          <div className="" style={{textAlign:"center",width:"100%",height:"80px",paddingTop:"25px",color:"#fff",background:"#000"}}>
 		 	<a
 					href={logindemo}
@@ -21,14 +13,8 @@ export default function Header() {
             </a>
 	       	 <btn className="btn btn-primary" style={{marginLeft:"15px"}}>
 	    		Visitar URL >>>
-	    	 </btn>
-
-		
-			
+	    	 </btn>			
 	    </div>
-	
-    
-		
 		);
 	};
 

@@ -1,79 +1,40 @@
 import React from "react";
-import { useEffect, useState, useRef, useCallback } from "react";
-import COUNTRIES_DATA from "./data/countries_data";
-import HEX_DATA from "./data/countries_hex_data.json";
-import Globe from "react-globe.gl";
+import * as THREE from 'three';
+//creating scene
+var scene = new THREE.Scene();
+scene.background = new THREE.Color(0x2a3b4c);
 
-const getRandomCountry = () => {
-  return COUNTRIES_DATA[Math.floor(Math.random() * COUNTRIES_DATA.length)];
-};
+//add camera
+var camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth/window.innerHeight
+);
 
-export default function CustomGlobe() {
-  const globeEl = useRef();
-  const country = getRandomCountry();
-  const [selectedCountry, setSelectedCountry] = useState({
-    lat: country.latitude,
-    lng: country.longitude,
-    label: country.name
-  });
-  const [hex, setHex] = useState({ features: [] });
+//renderer
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 
-  useEffect(() => {
-    setHex(HEX_DATA);
-  }, []);
+//add geometry
+var geometry = new THREE.BoxGeometry();
+var material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
+var cube = new THREE.Mesh(geometry, material);
 
-  // useEffect(() => {
-  //   let interval;
+scene.add(cube);
 
-  //   interval = setInterval(() => {
-  //     (async () => {
-  //       const country = getRandomCountry();
-  //       setSelectedCountry({
-  //         lat: country.latitude,
-  //         lng: country.longitude,
-  //         label: country.name
-  //       });
-  //     })();
-  //   }, 3000); //Every 3 seconds
-  //   return () => {
-  //     if (interval) {
-  //       clearInterval(interval);
-  //     }
-  //   };
-  // }, []);
+camera.position.z = 5;
 
-  useEffect(() => {
-    // globeEl.current.controls().autoRotate = true;
-    // globeEl.current.controls().autoRotateSpeed = 0.2;
 
-    const MAP_CENTER = { lat: 0, lng: 0, altitude: 1.5 };
-    globeEl.current.pointOfView(MAP_CENTER, 0);
-  }, [globeEl]);
+//animation
+var animate = function(){
+    requestAnimationFrame(animate);
 
-  useEffect(() => {
-    const countryLocation = {
-      lat: selectedCountry.lat,
-      lng: selectedCountry.lng,
-      altitude: 1.5
-    };
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
 
-    globeEl.current.pointOfView(countryLocation, 0);
-  }, [selectedCountry]);
+    renderer.render(scene, camera);
 
-  return (
-    <Globe
-      ref={globeEl}
-      backgroundColor="#000"
-      labelsData={[selectedCountry]}
-      labelText={"label"}
-      labelSize={1.6}
-      labelColor={useCallback(() => "white", [])}
-      labelDotRadius={0.4}
-      labelAltitude={0.05}
-      hexPolygonsData={hex.features}
-      hexPolygonResolution={3} //values higher than 3 makes it buggy
-      hexPolygonMargin={0.62}
-      hexPolygonColor={useCallback(() => "#1b66b1", [])}
-    />
-  );
 }
+
+animate();
+
