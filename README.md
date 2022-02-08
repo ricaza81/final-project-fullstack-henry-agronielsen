@@ -10,4 +10,8 @@
 # Requirements
 #### After npm start please check > Run in web browser
 
+# Cloud >>> AWS
+## Instance EC2 AWS
+### Instance AWS Amplifly
+
 ![img](https://github.com/ricaza81/final-project-fullstack-henry-agronielsen/raw/master/req.png)
