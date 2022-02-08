@@ -14,5 +14,6 @@
 ## Instance EC2 AWS
 ### http://3.248.196.212/ <br>
 ### Instance AWS Amplifly
+### http://3.248.196.212/ <br>
 
 ![img](https://github.com/ricaza81/final-project-fullstack-henry-agronielsen/raw/master/req.png)
